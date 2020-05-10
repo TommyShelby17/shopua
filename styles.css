@@ -89,6 +89,7 @@ header{
     color: #fff;
     cursor: pointer;
     transition: .6s;
+    z-index: 1;
 }
 
 .prev{
@@ -523,15 +524,14 @@ footer{
 	}
 
 	header{
-		height: 40vh;
+		height: 38vh;
 	}
 	
 	#slider-container {
-		height: calc(40vh - 50px);
+		height: calc(38vh - 50px);
 	}
 	.prev , .next{
 		font-size: 50px;
-		z-index: 30;
 
 	}
 	.billboard_items{
