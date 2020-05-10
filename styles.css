@@ -33,18 +33,88 @@ header{
 	
 }
 
-.header_billboard{
-	height: calc(100% - 100px);
-	background: url("images/billboard.jpg") center no-repeat;
-	-webkit-background-size: 100% 100%;
-	background-size: 100% 100%;
 
+			/*SLIDER*/
+
+
+
+
+#slider-container {
+  position: relative;
+  background-color: #fff;
+  height: calc(100vh - 100px);
+  overflow: hidden;
+
+}
+.slides {
+ 	height: 100%;
+ 	padding: 0;
+ 	margin: 0;
+	
 	position: relative;
+
+	display: flex;
+	flex-direction: row;
 
 }
 
+.slides>li{
+    height: 100%;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.billboard_img{
+	height: 100%;
+	width: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+
+
+.prev , .next{
+	position: absolute;
+	top: 0;
+	display: flex;
+	align-items: center;
+	text-align: center;
+
+	font-size: 80px;
+	height: 100%;
+    background-color: transparent;
+
+    opacity: .6;
+    color: #fff;
+    cursor: pointer;
+    transition: .6s;
+}
+
+.prev{
+	left: 0;
+	margin-left: -3px;
+}
+
+.next{
+	right: 0;
+}
+
+.prev:hover, .next:hover{
+	background-color: #fff;
+	opacity: .5;
+	color: #000;
+	transition: 1s ;
+}
+.solid-bg {
+  background-color: #999999;
+}
+
+
 
 			/*NAV*/
+
+
 nav{
 	display: flex;
 	justify-content: space-between;
@@ -320,6 +390,10 @@ footer{
 		margin-left: 15px;
 	}
 
+	
+
+	/* Burger-menu */
+
 
 	.burger-menu{
 		display: inline-block;
@@ -437,14 +511,6 @@ footer{
 	
 	}
 
-
-
-
-
-
-
-
-
 	.shopping_cart_cont{
 		width: 20px;
 		height: 17px;
@@ -459,19 +525,21 @@ footer{
 	header{
 		height: 40vh;
 	}
-	.header_billboard{
-		height: calc(100% - 50px);
-		background: url("images/billboard.jpg") center no-repeat;
-		background-size:100% 100%  ;
-		margin:0 auto;
-		overflow: hidden;
+	
+	#slider-container {
+		height: calc(40vh - 50px);
+	}
+	.prev , .next{
+		font-size: 50px;
+		z-index: 30;
 
-		
 	}
 	.billboard_items{
 		margin-left: 0px;
-		left: 14px;
+		left: 25px;
 		bottom: 10%;
+		width: 100%;
+		max-width: 200px;
 	}
 
 	.billboard_title{
@@ -557,6 +625,9 @@ footer{
 @media screen and (min-width: 500px) and  (max-width: 1000px){
 	header	{
 		height: 100vh;
+	}
+	#slider-container {
+		height: calc(100vh - 100px);
 	}
 	.billboard_items{
 		left: 25px;
